@@ -36,7 +36,7 @@ and contact information. It uses semantic HTML elements, including `header`, `na
 
 ## How to View the Website
 
-press ctr key plus Click the live website link at the top of this README, or open the following
+Click the live website link at the top of this README, or open the following
 address in your browser:
 
 https://ekitoepaul.github.io/portfolio/
