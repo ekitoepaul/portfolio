@@ -39,7 +39,7 @@ and contact information. It uses semantic HTML elements, including `header`, `na
 press ctr key plus Click the live website link at the top of this README, or open the following
 address in your browser:
 
-https://ekitoepaul.github.io/week2-portfolio/
+https://ekitoepaul.github.io/portfolio/
 
 ## Paul Ekitoe
 
