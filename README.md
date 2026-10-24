@@ -1,6 +1,6 @@
 # My Personal Portfolio
 
-**Live Website:** [View My Portfolio] https://ekitoepaul.github.io/portfolio/
+**Live Website:** [View My Portfolio](https://ekitoepaul.github.io/portfolio/)
 
 This is a four-page personal portfolio website built using HTML and published with GitHub Pages.
 
