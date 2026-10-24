@@ -1,15 +1,15 @@
 # My Personal Portfolio
 
-**Live Website:** [View My Portfolio] https://ekitoepaul.github.io/week2-portfolio/
+**Live Website:** [View My Portfolio] https://ekitoepaul.github.io/portfolio/
 
 This is a four-page personal portfolio website built using HTML and published with GitHub Pages.
 
 ## Live Pages
 
-- [Home](https://ekitoepaul.github.io/week2-portfolio/index.html)
-- [About](https://ekitoepaul.github.io/week2-portfolio/about.html)
-- [Projects](https://ekitoepaul.github.io/week2-portfolio/projects.html)
-- [Contact](https://ekitoepaul.github.io/week2-portfolio/contact.html)
+- [Home](https://ekitoepaul.github.io/portfolio/index.html)
+- [About](https://ekitoepaul.github.io/portfolio/about.html)
+- [Projects](https://ekitoepaul.github.io/portfolio/projects.html)
+- [Contact](https://ekitoepaul.github.io/portfolio/contact.html)
 
 ## About the Website
 
