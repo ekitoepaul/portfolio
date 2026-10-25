@@ -1,15 +1,15 @@
 # My Personal Portfolio
 
-**Live Website:** [View My Portfolio] https://ekitoepaul.github.io/week2-portfolio/
+**Live Website:** [View My Portfolio](https://ekitoepaul.github.io/portfolio/)
 
 This is a four-page personal portfolio website built using HTML and published with GitHub Pages.
 
 ## Live Pages
 
-- [Home](https://ekitoepaul.github.io/week2-portfolio/index.html)
-- [About](https://ekitoepaul.github.io/week2-portfolio/about.html)
-- [Projects](https://ekitoepaul.github.io/week2-portfolio/projects.html)
-- [Contact](https://ekitoepaul.github.io/week2-portfolio/contact.html)
+- [Home](https://ekitoepaul.github.io/portfolio/index.html)
+- [About](https://ekitoepaul.github.io/portfolio/about.html)
+- [Projects](https://ekitoepaul.github.io/portfolio/projects.html)
+- [Contact](https://ekitoepaul.github.io/portfolio/contact.html)
 
 ## About the Website
 
@@ -36,10 +36,10 @@ and contact information. It uses semantic HTML elements, including `header`, `na
 
 ## How to View the Website
 
-press ctr key plus Click the live website link at the top of this README, or open the following
+Click the live website link at the top of this README, or open the following
 address in your browser:
 
-https://ekitoepaul.github.io/week2-portfolio/
+https://ekitoepaul.github.io/portfolio/
 
 ## Paul Ekitoe
 
