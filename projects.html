@@ -1,146 +1,236 @@
+```html
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
-      content="Explore three planned research projects in AI-driven edge computing, simulation, and research methodology."
+      content="Explore three planned research projects in AI-driven edge computing, simulation, education systems, and research methodology."
     />
+
     <title>Projects | My Portfolio</title>
+
+    <!-- Google Fonts: Inter and Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
+    <!-- Header and Navigation -->
     <header>
       <nav aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <a href="projects.html" aria-current="page">Projects</a>
+          </li>
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
       <h1>My Projects</h1>
+
       <p>
         These are planned projects that reflect my research interests in
-        artificial intelligence, simulation, edge computing, and research
-        methodology.
+        artificial intelligence, simulation, edge computing, education systems,
+        and research methodology.
       </p>
 
-      <section>
-        <h2>1. Kenya Education Management Information System(KEMIS)</h2>
+      <!-- Project 1 -->
+      <section aria-labelledby="kemis-heading">
+        <span class="badge">Planned</span>
+
+        <h2 id="kemis-heading">
+          1. Kenya Education Management Information System (KEMIS)
+        </h2>
+
         <figure>
           <img
-            src="images/KEMIS_MIS.jpeg" style="max-width: 100%; height: auto"
-            alt="Computer diagram representing data analysis trends"
+            src="images/KEMIS_MIS.jpeg"
+            alt="Computer diagram representing education data analysis and management information systems"
+            width="1200"
+            height="800"
+            loading="lazy"
           />
-          <figcaption>Ministry of education MIS for decision making</figcaption>
+
+          <figcaption>
+            Ministry of Education management information system for
+            decision-making.
+          </figcaption>
         </figure>
+
         <p>
           This project will help schools manage learner records, attendance, and
-          basic academic information in one place.<br />
+          basic academic information in one place.
+        </p>
+
+        <p>
           The goal is to reduce manual paperwork and make it easier for teachers
           and administrators to access important information quickly.
         </p>
       </section>
 
-      <section>
-        <h2>2. E-learning Support Platform</h2>
+      <!-- Project 2 -->
+      <section aria-labelledby="elearning-heading">
+        <span class="badge">Planned</span>
+
+        <h2 id="elearning-heading">2. E-Learning Support Platform</h2>
+
         <figure>
           <img
             src="images/E-Learning Institute.jpg"
-            style="max-width: 100%; height: auto"
-            alt="Learners under instruction on E-learning support platform for education resources"
+            alt="Learners receiving instruction using an e-learning platform and educational resources"
+            width="1200"
+            height="800"
+            loading="lazy"
           />
+
           <figcaption>
-            Platform for supporting e-learning initiatives and resources.
+            Platform for supporting e-learning initiatives and educational
+            resources.
           </figcaption>
         </figure>
+
         <p>
           This platform will provide learners with access to learning materials,
-          simple quizzes, and teacher support.<br />
+          simple quizzes, and teacher support.
+        </p>
+
+        <p>
           It is designed especially for learners who may not always have access
           to physical learning resources, helping to make learning more flexible
           and inclusive.
         </p>
       </section>
 
-      <section>
-        <h2>3. Data analytics Dashboard for Students</h2>
+      <!-- Project 3 -->
+      <section aria-labelledby="dashboard-heading">
+        <span class="badge">Planned</span>
+
+        <h2 id="dashboard-heading">3. Data Analytics Dashboard for Students</h2>
+
         <figure>
           <img
-            src="images/MIS-Dashboard.jpg" style="max-width: 100%; height: auto"
-            alt="Student reviews charts and research data on a laptop in an educational setting"
+            src="images/MIS-Dashboard.jpg"
+            alt="Student reviewing charts and research data on a laptop in an educational setting"
+            width="1200"
+            height="800"
+            loading="lazy"
           />
+
           <figcaption>
-            Planned dashboard to support Education stakeholders in planning and
-            reporting students data statistics.
+            Planned dashboard to support education stakeholders in planning and
+            reporting student data statistics.
           </figcaption>
         </figure>
+
         <p>
-          This project will create a simple web dashboard to help Education
+          This project will create a simple web dashboard to help education
           stakeholders plan, coordinate, and report on student data for
-          decision-making purposes.<br />
-          It will provide tools for documenting and recording all education data
-          and project timelines.
+          decision-making purposes.
+        </p>
+
+        <p>
+          It will provide tools for documenting and recording education data and
+          project timelines.
         </p>
       </section>
 
-      <h2>Project Summary</h2>
+      <!-- Project Summary Table -->
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Project Summary</h2>
 
-      <table>
-        <caption>
-          Summary of planned portfolio projects, their focus areas, and expected
-          outcomes.
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Project</th>
-            <th scope="col">Main Focus</th>
-            <th scope="col">Expected Outcome</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">
-              Kenya Education Management Information System (KEMIS)
-            </th>
-            <td>Education data management and analysis</td>
-            <td>
-              A comprehensive system for tracking and reporting educational
-              metrics in Kenya
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">E-Learning Support Platforms</th>
-            <td>Provide online learning materials and support</td>
-            <td>
-              Improved accessibility and inclusivity of learning opportunities
-            </td>
-          </tr>
+        <table>
+          <caption>
+            Summary of planned portfolio projects, their focus areas, and
+            expected outcomes.
+          </caption>
 
-          <tr>
-            <th scope="row">Data analytics Dashboard for Students</th>
-            <td>Data analysis and reporting</td>
-            <td>
-              A web-based tool for planning and documenting student research
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          <thead>
+            <tr>
+              <th scope="col">Project</th>
+              <th scope="col">Main Focus</th>
+              <th scope="col">Expected Outcome</th>
+            </tr>
+          </thead>
 
-      <p>
-        For more information about my background, visit the
-        <a href="about.html">about page</a>. To discuss a possible
-        collaboration, use the <a href="contact.html">contact page</a>.
-      </p>
+          <tbody>
+            <tr>
+              <th scope="row">
+                Kenya Education Management Information System (KEMIS)
+              </th>
+
+              <td>Education data management and analysis</td>
+
+              <td>
+                A comprehensive system for tracking and reporting educational
+                metrics in Kenya.
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">E-Learning Support Platform</th>
+
+              <td>Providing online learning materials and support</td>
+
+              <td>
+                Improved accessibility and inclusivity of learning
+                opportunities.
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Data Analytics Dashboard for Students</th>
+
+              <td>Data analysis and reporting</td>
+
+              <td>
+                A web-based tool for planning and documenting student research
+                and education data.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Internal Links -->
+      <section aria-label="Explore more">
+        <p>
+          For more information about my background, visit the
+          <a href="about.html">About page</a>. To discuss a possible
+          collaboration, use the <a href="contact.html">Contact page</a>.
+        </p>
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <p>&copy; 2026 My Portfolio. All rights reserved.</p>
     </footer>
   </body>
 </html>
+```

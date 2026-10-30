@@ -39,6 +39,44 @@
   --transition-speed: 180ms;
 }
 
+/* =========================================
+   GOOGLE FONTS
+   ========================================= */
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+/* =========================================
+   IMAGE RESPONSIVENESS AND SIZING
+   ========================================= */
+
+figure {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+figure figcaption {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 /* ---------- 2. Reset ---------- */
 
 *,
@@ -406,6 +444,18 @@ main > section figure {
 }
 
 /* Optional badge: place inside a relatively positioned card. */
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
 .badge {
   position: absolute;
   top: var(--space-3);

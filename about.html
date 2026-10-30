@@ -1,72 +1,156 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/styles.css" />
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about my academic background, reasons for learning to code, technical skills, and future goals.">
+
+  <meta
+    name="description"
+    content="Learn about my academic background, reasons for learning to code, technical skills, and future goals."
+  >
+
   <title>About | My Portfolio</title>
+
+  <!-- Google Fonts: Inter and Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
+  <!-- Header and Navigation -->
   <header>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
+
     <h1>About Me</h1>
 
-    <h2>My Background</h2>
-    <p>
-      I am a PhD student in computer science at Maseno University with a strong interest in developing Education Systems, simulation, modelling, artificial intelligence, and edge computing.<br>My academic work combines theoretical understanding with practical research design, data analysis, and computational experimentation.<br>
-      Currently I serve as a quality assurance & standards officer in the ministry of education,Nairobi -Kenya.<br>My work has given me a strong interest in using technology to improve education.<br>Over the years, I have worked closely with learners,teachers, other education stakeholders and education systems.<br>I am therefore,learning software Engineering to build practical digital solutions that can support teaching, learning, and Kenya education management Information stystem.<br>This experience has shown me how powerful technology can be in improving the quality of education in my country -Kenya.
-    </p>
+    <!-- Academic and Professional Background -->
+    <section aria-labelledby="background-heading">
+      <h2 id="background-heading">My Background</h2>
 
-    <figure>
-      <img src="images/CodingLaptop-enviroment.jpg" width="1200" height="auto" alt="Laptop, notebook, and coffee on a study desk used for programming and research">
-      <figcaption>My workspace for coding, research, and academic writing.</figcaption>
-    </figure>
+      <p>
+        I am a PhD student in Computer Science at Maseno University
+        with a strong interest in developing education systems,
+        simulation and modelling, artificial intelligence, and
+        edge computing.
+      </p>
 
-    <h2>Why I Am Learning to Code</h2>
-    <p>
-      I am learning to code because programming allows me to build tools that test
-      ideas, automate analysis, and model complex systems. It also helps me turn
-      research questions into working prototypes and communicate results through
-      interactive web-based portfolios.
-    </p>
+      <p>
+        My academic work combines theoretical understanding with
+        practical research design, data analysis, and computational
+        experimentation.
+      </p>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML and semantic web development</li>
-      <li>Python programming for data analysis and simulation</li>
-      <li>Research design and experimental methods</li>
-      <li>Artificial intelligence and machine-learning concepts</li>
-      <li>Edge computing and distributed systems</li>
-      <li>Academic writing, presentation, and supervision</li>
-    </ul>
+      <p>
+        Currently, I serve as a Quality Assurance and Standards
+        Officer in the Ministry of Education, Nairobi, Kenya.
+        My work has given me a strong interest in using technology
+        to improve education.
+      </p>
 
-    <h2>Goals</h2>
-    <p>
-      My goal is to complete doctoral research that contributes to intelligent,
-      efficient, and ethical edge-computing systems. I also aim to develop practical
-      software tools, publish high-quality research, and support other students in
-      developing strong research and technical skills.
-    </p>
+      <p>
+        Over the years, I have worked closely with learners,
+        teachers, education stakeholders, and education systems.
+        I am therefore learning software engineering to build
+        practical digital solutions that can support teaching,
+        learning, and Kenya's education management information
+        systems.
+      </p>
 
-    <p>
-      You can view my work on the
-      <a href="projects.html">projects page</a> or send me a message through the
-      <a href="contact.html">contact page</a>.
-    </p>
+      <p>
+        This experience has shown me how powerful technology
+        can be in improving the quality of education in Kenya.
+      </p>
+
+      <figure>
+        <img
+          src="images/CodingLaptop-enviroment.jpg"
+          alt="Laptop, notebook, and coffee on a study desk used for programming and research"
+          width="1200"
+          height="800"
+          loading="lazy"
+        />
+
+        <figcaption>
+          My workspace for coding, research, and academic writing.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Motivation for Learning to Code -->
+    <section aria-labelledby="coding-heading">
+      <h2 id="coding-heading">Why I Am Learning to Code</h2>
+
+      <p>
+        I am learning to code because programming allows me to
+        build tools that test ideas, automate analysis, and model
+        complex systems. It also helps me turn research questions
+        into working prototypes and communicate results through
+        interactive web-based portfolios.
+      </p>
+    </section>
+
+    <!-- Technical and Professional Skills -->
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+
+      <ul>
+        <li>HTML and semantic web development</li>
+        <li>Python programming for data analysis and simulation</li>
+        <li>Research design and experimental methods</li>
+        <li>Artificial intelligence and machine-learning concepts</li>
+        <li>Edge computing and distributed systems</li>
+        <li>Academic writing, presentation, and supervision</li>
+      </ul>
+    </section>
+
+    <!-- Career and Academic Goals -->
+    <section aria-labelledby="goals-heading">
+      <h2 id="goals-heading">Goals</h2>
+
+      <p>
+        My goal is to complete doctoral research that contributes
+        to intelligent, efficient, and ethical edge-computing
+        systems. I also aim to develop practical software tools,
+        publish high-quality research, and support other students
+        in developing strong research and technical skills.
+      </p>
+    </section>
+
+    <!-- Portfolio Links -->
+    <section aria-label="Explore my portfolio">
+      <p>
+        You can view my work on the
+        <a href="projects.html">projects page</a>
+        or send me a message through the
+        <a href="contact.html">contact page</a>.
+      </p>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2026 My Portfolio. All rights reserved.</p>
   </footer>
