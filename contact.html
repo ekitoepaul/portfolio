@@ -1,174 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="description"
-    content="Contact me for academic enquiries, research collaboration, and professional opportunities.">
+    <meta
+      name="description"
+      content="Contact me for academic enquiries, research collaboration, and professional opportunities."
+    />
 
-  <title>Contact | My Portfolio</title>
+    <title>Contact | My Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-logo" href="index.html">My Portfolio</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="site-logo" href="index.html">My Portfolio</a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-      <nav aria-label="Main navigation">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <section class="contact-intro" aria-labelledby="contact-heading">
-
-      <h1 id="contact-heading">Contact Me</h1>
-
-      <p>
-        Thank you for visiting my portfolio. I welcome academic enquiries,
-        research collaboration, professional networking, and discussions
-        about technology and education.
-      </p>
-
-    </section>
-
-    <div class="contact-layout">
-
-      <!-- Contact Information -->
-      <aside class="contact-details" aria-labelledby="details-heading">
-
-        <h2 id="details-heading">Let's Connect</h2>
+    <main class="container">
+      <section class="contact-intro" aria-labelledby="contact-heading">
+        <h1 id="contact-heading">Contact Me</h1>
 
         <p>
-          I am interested in connecting with researchers, educators,
-          students, and technology professionals who share an interest
-          in computer science, education systems, artificial intelligence,
-          simulation, and edge computing.
+          Thank you for visiting my portfolio. I welcome academic enquiries,
+          research collaboration, professional networking, and discussions about
+          technology and education.
         </p>
-
-        <ul class="contact-list">
-          <li>
-            <strong>Location:</strong> Nairobi, Kenya
-          </li>
-
-          <li>
-            <strong>Academic interests:</strong>
-            Computer Science and Research
-          </li>
-
-          <li>
-            <strong>Professional interests:</strong>
-            Education and Technology
-          </li>
-        </ul>
-
-      </aside>
-
-      <!-- Contact Form -->
-      <section class="contact-form-section" aria-labelledby="form-heading">
-
-        <h2 id="form-heading">Send Me a Message</h2>
-
-        <!-- Connect this form to a form-processing service before publishing -->
-        <form class="contact-form" action="#" method="post">
-
-          <div class="form-group">
-            <label for="name">Full Name</label>
-
-            <input
-              type="text"
-              id="name"
-              name="name"
-              autocomplete="name"
-              placeholder="Enter your full name"
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              placeholder="Enter your email address"
-              required
-            >
-          </div>
-
-          <div class="form-group form-full">
-            <label for="subject">Subject</label>
-
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              placeholder="Enter the subject"
-              required
-            >
-          </div>
-
-          <div class="form-group form-full">
-            <label for="message">Message</label>
-
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              placeholder="Write your message here..."
-              required
-            ></textarea>
-          </div>
-
-          <div class="form-full">
-            <button class="button submit-button" type="submit">
-              Send Message
-            </button>
-          </div>
-
-        </form>
-
       </section>
 
-    </div>
+      <div class="contact-layout">
+        <!-- Contact Information -->
+        <aside class="contact-details" aria-labelledby="details-heading">
+          <h2 id="details-heading">Let's Connect</h2>
 
-    <section class="content-section" aria-label="Return to portfolio">
+          <p>
+            I am interested in connecting with researchers, educators, students,
+            and technology professionals who share an interest in computer
+            science, education systems, artificial intelligence, simulation, and
+            edge computing.
+          </p>
 
-      <p>
-        You can also explore my
-        <a href="projects.html">research projects</a>
-        or learn more about my
-        <a href="about.html">academic and professional background</a>.
-      </p>
+          <ul class="contact-list">
+            <li><strong>Location:</strong> Nairobi, Kenya</li>
 
-    </section>
+            <li>
+              <strong>Academic interests:</strong>
+              Computer Science and Research
+            </li>
 
-  </main>
+            <li>
+              <strong>Professional interests:</strong>
+              Education and Technology
+            </li>
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:ekitoe.paul@gmail.com">
+                ekitoe.paul@gmail.com
+              </a>
+            </li>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 My Portfolio. All rights reserved.</p>
-  </footer>
+            <li>
+              <strong>Telephone:</strong>
+              <a href="tel:+254717544278"> +254 717 544 278 </a>
+            </li>
 
-</body>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a
+                href="https://www.linkedin.com/in/paul-lomor-ekitoe-8725b676"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Connect with me on LinkedIn
+              </a>
+            </li>
+
+            <li>
+              <strong>GitHub:</strong>
+              <a
+                href="https://github.com/ekitoepaul"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View my GitHub profile
+              </a>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section" aria-labelledby="form-heading">
+          <h2 id="form-heading">Send Me a Message</h2>
+
+          <!-- Connect this form to a form-processing service before publishing -->
+          <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+
+            <div class="form-group form-full">
+              <label for="subject">Subject</label>
+
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Enter the subject"
+                required
+              />
+            </div>
+
+            <div class="form-group form-full">
+              <label for="message">Message</label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-full">
+              <button class="button submit-button" type="submit">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <section class="content-section" aria-label="Return to portfolio">
+        <p>
+          You can also explore my
+          <a href="projects.html">research projects</a>
+          or learn more about my
+          <a href="about.html">academic and professional background</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

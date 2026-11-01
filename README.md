@@ -32,6 +32,7 @@ adjustments are applied using `min-width` media queries as the screen becomes wi
 - Email, telephone, social media, and external links
 - Mobile-first CSS with responsive layouts for tablets and desktop screens
 - A responsive navigation menu and page layout using CSS media queries
+- Email, telephone, social media, and external links
 
 ## Technologies Used
 

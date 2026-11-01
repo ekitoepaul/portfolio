@@ -613,6 +613,23 @@ figure img {
   box-shadow: var(--shadow-card);
 }
 
+/* Contact links */
+.contact-list a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-list a:hover {
+  color: var(--color-accent);
+}
+
+.contact-list a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
 .contact-list {
   padding-left: 1.25rem;
 }
