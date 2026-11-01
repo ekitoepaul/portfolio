@@ -1,83 +1,39 @@
-/*
-  Portfolio stylesheet
-  File: css/styles.css
-  Used by: index.html, about.html, projects.html, contact.html
-*/
-
-/* ---------- 1. Design tokens ---------- */
+/* ==================================================
+   1. DESIGN TOKENS
+   ================================================== */
 
 :root {
+  --color-primary: #17365d;
+  --color-primary-dark: #102844;
+  --color-accent: #c58b36;
+
   --color-background: #f7f8fa;
   --color-surface: #ffffff;
-  --color-text: #1f2933;
-  --color-muted: #4b5563;
-  --color-primary: #1d4ed8;
-  --color-primary-dark: #16389c;
-  --color-accent: #92400e;
-  --color-border: #d1d5db;
-  --color-table-header: #e8eefc;
+  --color-text: #263238;
+  --color-muted: #64748b;
+  --color-border: #dce2e8;
 
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
-  --font-size-3xl: 2.5rem;
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
 
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 1rem;
-  --space-4: 1.5rem;
-  --space-5: 2rem;
-  --space-6: 3rem;
+  --container-width: 1200px;
 
-  --radius-sm: 0.375rem;
-  --radius-md: 0.75rem;
-  --border-width: 1px;
-  --container-width: 68rem;
-  --header-height: 6rem;
-  --transition-speed: 180ms;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+
+  --radius-small: 6px;
+  --radius-medium: 12px;
+
+  --shadow-card: 0 4px 16px rgb(0 0 0 / 8%);
 }
 
-/* =========================================
-   GOOGLE FONTS
-   ========================================= */
 
-body {
-  font-family: "Inter", sans-serif;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Playfair Display", serif;
-}
-
-/* =========================================
-   IMAGE RESPONSIVENESS AND SIZING
-   ========================================= */
-
-figure {
-  max-width: 1200px;
-  margin: 2rem auto;
-}
-
-figure img {
-  display: block;
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-figure figcaption {
-  margin-top: 0.75rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* ---------- 2. Reset ---------- */
+/* ==================================================
+   2. GLOBAL RESET
+   ================================================== */
 
 *,
 *::before,
@@ -87,592 +43,765 @@ figure figcaption {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height);
+  overflow-wrap: break-word;
 }
 
 body {
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100svh;
   margin: 0;
-  font-family:
-    "Inter",
-    "Segoe UI",
-    system-ui,
-    -apple-system,
-    sans-serif;
-  font-size: var(--font-size-base);
-  line-height: 1.6;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+
   color: var(--color-text);
   background-color: var(--color-background);
 }
 
-img,
-video {
+img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-iframe {
-  display: block;
-  max-width: 100%;
+a {
+  color: var(--color-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
-figure {
-  max-width: 100%;
-  margin: 0 0 var(--space-4);
+a:hover {
+  color: var(--color-accent);
 }
 
-figcaption {
-  margin-top: var(--space-2);
-  color: var(--color-muted);
-  font-size: var(--font-size-sm);
-  line-height: 1.5;
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 button,
 input,
 textarea,
-select {
-  font: inherit;
-}
-
-main,
-section,
-article,
-nav,
-header,
-footer,
-figure {
+a {
   min-width: 0;
 }
 
-pre {
-  max-width: 100%;
-  overflow-x: auto;
-}
-
 p,
-li,
-td,
-th {
-  overflow-wrap: break-word;
-}
-
-/* ---------- 3. Global typography ---------- */
-
 h1,
 h2,
 h3,
-h4 {
-  color: var(--color-text);
+figure {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
   line-height: 1.25;
-  overflow-wrap: anywhere;
 }
 
 h1 {
-  margin: 0 0 var(--space-3);
-  font-size: var(--font-size-3xl);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin-bottom: var(--space-3);
 }
 
 h2 {
-  margin: 0 0 var(--space-3);
-  font-size: var(--font-size-2xl);
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  margin-bottom: var(--space-2);
 }
 
 h3 {
-  margin: 0 0 var(--space-2);
-  font-size: var(--font-size-xl);
+  font-size: 1.25rem;
 }
 
-p {
-  max-width: 65ch;
-  margin: 0 0 var(--space-3);
-  color: var(--color-muted);
-}
-
-strong,
-b {
-  color: var(--color-text);
-}
-
-small,
-.small-text {
-  font-size: var(--font-size-sm);
-  color: var(--color-muted);
-}
-
-/* ---------- 4. Page layout ---------- */
-
-/* Works with the plain <main> in projects.html. */
-main {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: var(--space-5) var(--space-4);
-}
-
-/* Reusable container for other pages. */
-.container {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 var(--space-4);
+ul {
+  padding-left: 1.5rem;
 }
 
 section {
-  margin: 0 0 var(--space-5);
-  padding: var(--space-4);
-  background-color: var(--color-surface);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: 0 2px 8px rgb(31 41 51 / 0.05);
+  min-width: 0;
 }
 
-section > h2 {
-  margin-bottom: var(--space-3);
-}
 
-.section {
-  padding: var(--space-5) 0;
-  border-bottom: var(--border-width) solid var(--color-border);
-}
-
-.section:last-of-type {
-  border-bottom: 0;
-}
-
-.page-title {
-  margin-bottom: var(--space-3);
-  font-size: var(--font-size-3xl);
-  line-height: 1.15;
-}
-
-/* ---------- 5. Sticky header and navigation ---------- */
-
-/* Targets the actual <header> in projects.html. */
-body > header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: var(--space-3) var(--space-4);
-  background-color: var(--color-surface);
-  border-bottom: var(--border-width) solid var(--color-border);
-  box-shadow: 0 2px 6px rgb(31 41 51 / 0.05);
-}
-
-/* Also supports reusable header classes. */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: var(--color-surface);
-  border-bottom: var(--border-width) solid var(--color-border);
-}
-
-body > header nav,
-.site-nav {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-}
-
-body > header nav ul,
-.site-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-body > header nav a,
-.site-nav a {
-  display: inline-block;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-sm);
-  color: var(--color-text);
-  font-weight: 600;
-  text-decoration: none;
-  transition:
-    background-color var(--transition-speed) ease,
-    color var(--transition-speed) ease;
-}
-
-body > header nav a:hover,
-.site-nav a:hover {
-  color: var(--color-surface);
-  background-color: var(--color-primary);
-}
-
-body > header nav a:focus-visible,
-.site-nav a:focus-visible {
-  color: var(--color-surface);
-  background-color: var(--color-primary);
-}
-
-/* ---------- 6. Links and keyboard accessibility ---------- */
-
-a {
-  color: var(--color-primary);
-  text-underline-offset: 0.2em;
-  transition: color var(--transition-speed) ease;
-}
-
-a:hover {
-  color: var(--color-primary-dark);
-  text-decoration-thickness: 2px;
-}
+/* ==================================================
+   3. ACCESSIBILITY
+   ================================================== */
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
+textarea:focus-visible {
   outline: 3px solid var(--color-accent);
-  outline-offset: 3px;
+  outline-offset: 4px;
 }
 
-/* ---------- 7. Reusable buttons ---------- */
-
-.button {
-  display: inline-block;
-  max-width: 100%;
-  padding: var(--space-2) var(--space-4);
-  border: var(--border-width) solid var(--color-primary);
-  border-radius: var(--radius-sm);
-  background-color: var(--color-primary);
-  color: var(--color-surface);
-  font: inherit;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    background-color var(--transition-speed) ease,
-    border-color var(--transition-speed) ease,
-    color var(--transition-speed) ease,
-    transform var(--transition-speed) ease;
+:focus:not(:focus-visible) {
+  outline: none;
 }
-
-.button:hover {
-  background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
-  color: var(--color-surface);
-  transform: translateY(-2px);
-}
-
-.button-secondary {
-  background-color: transparent;
-  color: var(--color-primary);
-}
-
-.button-secondary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-surface);
-}
-
-/* ---------- 8. Project cards and images ---------- */
-
-/* Each project <section> becomes a card. */
-main > section {
-  position: relative;
-  min-width: 0;
-  margin-bottom: var(--space-5);
-  padding: var(--space-4);
-  background-color: var(--color-surface);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: 0 2px 8px rgb(31 41 51 / 0.06);
-  transition:
-    box-shadow var(--transition-speed) ease,
-    transform var(--transition-speed) ease;
-}
-
-main > section:hover {
-  box-shadow: 0 6px 16px rgb(31 41 51 / 0.1);
-}
-
-main > section img,
-.project-card img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: var(--space-2);
-  border-radius: var(--radius-sm);
-  object-fit: contain;
-}
-
-main > section figure {
-  margin-bottom: var(--space-4);
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
-  gap: var(--space-4);
-}
-
-.project-card,
-.profile-card,
-.contact-card,
-.card {
-  position: relative;
-  min-width: 0;
-  padding: var(--space-4);
-  margin-bottom: var(--space-4);
-  background-color: var(--color-surface);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: 0 2px 8px rgb(31 41 51 / 0.06);
-}
-
-.project-card:hover {
-  transform: translateY(-2px);
-}
-
-.card h2,
-.card h3,
-.project-card h2,
-.project-card h3 {
-  margin-top: 0;
-}
-
-.card p:last-child,
-.project-card p:last-child {
-  margin-bottom: 0;
-}
-
-/* Optional badge: place inside a relatively positioned card. */
-
-.badge {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  background-color: #2563eb;
-  color: #ffffff;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.badge {
-  position: absolute;
-  top: var(--space-3);
-  right: var(--space-3);
-  z-index: 1;
-  max-width: calc(100% - 2 * var(--space-3));
-  padding: var(--space-1) var(--space-2);
-  border-radius: 999px;
-  background-color: var(--color-accent);
-  color: var(--color-surface);
-  font-size: var(--font-size-sm);
-  font-weight: 700;
-  overflow-wrap: anywhere;
-}
-
-.badge-featured {
-  background-color: var(--color-primary);
-}
-
-.badge-in-progress {
-  background-color: var(--color-accent);
-}
-
-/* ---------- 9. Project summary table ---------- */
-
-main > table {
-  width: 100%;
-  max-width: 100%;
-  margin: var(--space-4) 0 var(--space-5);
-  border-collapse: collapse;
-  background-color: var(--color-surface);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-sm);
-}
-
-/* The table scrolls within its own area on small screens. */
-main > table {
-  display: block;
-  overflow-x: auto;
-}
-
-table caption {
-  padding: var(--space-3);
-  color: var(--color-muted);
-  font-size: var(--font-size-sm);
-  text-align: left;
-}
-
-table th,
-table td {
-  padding: var(--space-3);
-  border: var(--border-width) solid var(--color-border);
-  text-align: left;
-  vertical-align: top;
-  line-height: 1.5;
-}
-
-table thead th {
-  background-color: var(--color-table-header);
-  color: var(--color-text);
-  font-weight: 700;
-}
-
-table tbody th {
-  background-color: var(--color-background);
-  font-weight: 600;
-}
-
-table tbody tr:nth-child(even) {
-  background-color: #f8fafc;
-}
-
-/* ---------- 10. Contact form ---------- */
-
-.contact-form {
-  width: 100%;
-  max-width: 40rem;
-}
-
-.form-field {
-  margin-bottom: var(--space-4);
-}
-
-label {
-  display: block;
-  margin-bottom: var(--space-2);
-  color: var(--color-text);
-  font-weight: 600;
-}
-
-input,
-textarea,
-select {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  padding: var(--space-2) var(--space-3);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background-color: var(--color-surface);
-  color: var(--color-text);
-  line-height: 1.5;
-}
-
-textarea {
-  min-height: 8rem;
-  resize: vertical;
-}
-
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  border-color: var(--color-primary);
-}
-
-/* ---------- 11. Footer ---------- */
-
-body > footer,
-.site-footer {
-  padding: var(--space-4);
-  background-color: var(--color-surface);
-  border-top: var(--border-width) solid var(--color-border);
-  color: var(--color-muted);
-}
-
-body > footer p,
-.site-footer p {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* ---------- 12. Tablet screens ---------- */
-
-@media (max-width: 768px) {
-  :root {
-    --font-size-3xl: 2.25rem;
-    --font-size-2xl: 1.75rem;
-  }
-
-  main {
-    padding: var(--space-4);
-  }
-
-  main > section {
-    padding: var(--space-3);
-  }
-
-  body > header nav ul,
-  .site-nav ul {
-    gap: var(--space-1);
-  }
-}
-
-/* ---------- 13. Mobile screens ---------- */
-
-@media (max-width: 480px) {
-  :root {
-    --font-size-3xl: 2rem;
-    --font-size-2xl: 1.625rem;
-    --header-height: 8rem;
-  }
-
-  main {
-    padding: var(--space-3);
-  }
-
-  body > header {
-    padding: var(--space-2);
-  }
-
-  body > header nav ul,
-  .site-nav ul {
-    width: 100%;
-    gap: var(--space-1);
-  }
-
-  body > header nav a,
-  .site-nav a {
-    padding: var(--space-2);
-    text-align: center;
-  }
-
-  main > section {
-    padding: var(--space-3);
-    margin-bottom: var(--space-4);
-  }
-
-  .project-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  table th,
-  table td {
-    padding: var(--space-2);
-  }
-
-  .button {
-    max-width: 100%;
-  }
-}
-
-/* ---------- 14. Reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* ==================================================
+   4. MAIN CONTAINER
+   ================================================== */
+
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+  padding-block: var(--space-4);
+}
+
+.content-section {
+  padding-block: var(--space-3);
+}
+
+.page-intro {
+  max-width: 760px;
+  margin-bottom: var(--space-4);
+}
+
+
+/* ==================================================
+   5. HEADER AND NAVIGATION - FLEXBOX
+   ================================================== */
+
+.site-header {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+.header-inner {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+  padding-block: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-logo {
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-logo:hover {
+  color: var(--color-accent);
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-list a {
+  min-height: 44px;
+  padding: 0.65rem 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-small);
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+  color: white;
+  background-color: rgb(255 255 255 / 15%);
+}
+
+
+/* ==================================================
+   6. STICKY FOOTER - FLEXBOX
+   ================================================== */
+
+main {
+  flex: 1;
+  min-width: 0;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 1.5rem 1rem;
+
+  color: white;
+  background-color: var(--color-primary-dark);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+
+/* ==================================================
+   7. BUTTONS
+   ================================================== */
+
+.button {
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-small);
+
+  color: white;
+  background-color: var(--color-primary);
+
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: white;
+  background-color: var(--color-primary-dark);
+}
+
+.button-outline {
+  color: var(--color-primary);
+  background-color: transparent;
+}
+
+.button-outline:hover {
+  color: white;
+}
+
+
+/* ==================================================
+   8. HOMEPAGE HERO - GRID
+   ================================================== */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+  padding-block: var(--space-3);
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-intro {
+  max-width: 650px;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  justify-self: center;
+  margin: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 450px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-medium);
+}
+
+figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+/* ==================================================
+   9. RESOURCE AND SKILLS LISTS
+   ================================================== */
+
+.resource-list,
+.skills-list {
+  padding-left: 1.25rem;
+}
+
+.resource-list li,
+.skills-list li {
+  padding-block: 0.35rem;
+}
+
+.skills-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+
+/* ==================================================
+   10. ABOUT PAGE - GRID TEMPLATE AREAS
+   ================================================== */
+
+.about-layout {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  grid-template-areas:
+    "story"
+    "sidebar"
+    "motivation"
+    "skills"
+    "goals";
+
+  gap: var(--space-4);
+}
+
+.about-story {
+  grid-area: story;
+}
+
+.about-sidebar {
+  grid-area: sidebar;
+  min-width: 0;
+}
+
+.about-motivation {
+  grid-area: motivation;
+}
+
+.about-skills {
+  grid-area: skills;
+}
+
+.about-goals {
+  grid-area: goals;
+}
+
+.about-sidebar figure {
+  margin: 0;
+}
+
+.about-sidebar img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-medium);
+}
+
+
+/* ==================================================
+   11. PROJECTS GRID
+   ================================================== */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+.project-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+
+  box-shadow: var(--shadow-card);
+}
+
+.project-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.project-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 0.75rem;
+  padding: 1.25rem;
+}
+
+.project-content h2 {
+  font-size: 1.35rem;
+}
+
+.project-content p {
+  margin-bottom: 0;
+}
+
+.project-caption {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+
+  color: var(--color-primary);
+  background-color: #e7eef7;
+
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.card-link {
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 1rem;
+
+  display: inline-flex;
+  align-items: center;
+
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   12. PROJECT SUMMARY TABLE
+   ================================================== */
+
+.summary-section {
+  padding-block: var(--space-5);
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-surface);
+}
+
+caption {
+  padding: 1rem;
+  color: var(--color-muted);
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.9rem;
+  border: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead {
+  color: white;
+  background-color: var(--color-primary);
+}
+
+tbody th {
+  color: var(--color-primary-dark);
+}
+
+
+/* ==================================================
+   13. IMAGE RESPONSIVENESS
+   ================================================== */
+
+figure {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-medium);
+}
+
+
+/* ==================================================
+   14. CONTACT PAGE LAYOUT
+   ================================================== */
+
+.contact-intro {
+  max-width: 800px;
+  margin-bottom: var(--space-4);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.contact-details,
+.contact-form-section {
+  min-width: 0;
+  padding: 1.5rem;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+
+  box-shadow: var(--shadow-card);
+}
+
+.contact-list {
+  padding-left: 1.25rem;
+}
+
+.contact-list li {
+  padding-block: 0.4rem;
+}
+
+
+/* ==================================================
+   15. RESPONSIVE CONTACT FORM - GRID
+   ================================================== */
+
+.contact-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.form-group {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.85rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+
+  color: var(--color-text);
+  background-color: white;
+}
+
+.form-group input {
+  min-height: 48px;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.submit-button {
+  width: 100%;
+}
+
+
+/* ==================================================
+   16. TABLET AND SMALL LAPTOP
+   Minimum width: 48rem (768px)
+   ================================================== */
+
+@media (min-width: 48rem) {
+
+  .header-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  main > section:hover,
-  .project-card:hover,
-  .button:hover {
-    transform: none;
+  .nav-list {
+    justify-content: flex-end;
   }
+
+  .hero {
+    grid-template-columns:
+      minmax(0, 1.2fr)
+      minmax(250px, 0.8fr);
+  }
+
+  /* About page template areas */
+  .about-layout {
+    grid-template-columns:
+      minmax(0, 1.6fr)
+      minmax(240px, 0.8fr);
+
+    grid-template-areas:
+      "story sidebar"
+      "motivation sidebar"
+      "skills goals";
+  }
+
+  .contact-layout {
+    grid-template-columns:
+      minmax(240px, 0.8fr)
+      minmax(0, 1.4fr);
+  }
+
+  .contact-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .submit-button {
+    width: auto;
+  }
+
+}
+
+
+/* ==================================================
+   17. LARGE SCREENS
+   Minimum width: 64rem (1024px)
+   ================================================== */
+
+@media (min-width: 64rem) {
+
+  .container {
+    padding-block: var(--space-5);
+  }
+
+  .header-inner {
+    min-height: 76px;
+  }
+
+  .hero {
+    gap: 4rem;
+  }
+
+  .hero-image {
+    max-width: 480px;
+  }
+
+  .projects-grid {
+    grid-template-columns:
+      repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  }
+
+  .about-layout {
+    gap: 2.5rem;
+  }
+
+}
+
+
+/* ==================================================
+   18. SMALL SCREEN ADJUSTMENTS
+   ================================================== */
+
+@media (max-width: 30rem) {
+
+  .container {
+    width: min(100% - 1.25rem, var(--container-width));
+  }
+
+  .header-inner {
+    width: min(100% - 1rem, var(--container-width));
+  }
+
+  .nav-list {
+    gap: 0.15rem;
+  }
+
+  .nav-list a {
+    padding-inline: 0.55rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .contact-details,
+  .contact-form-section {
+    padding: 1rem;
+  }
+
 }
