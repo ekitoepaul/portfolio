@@ -1,162 +1,184 @@
-```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Personal portfolio of a computer science researcher interested in education systems, edge computing, simulation, and modelling."
+  >
 
-    <meta
-      name="description"
-      content="Personal portfolio of a computer science researcher interested in education systems, edge computing, simulation, and modelling."
-    />
+  <title>Home | My Personal Portfolio</title>
 
-    <title>Home | My Personal Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet"
+  >
 
-    <!-- Google Fonts: Inter and Playfair Display -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
+<body>
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">My Portfolio</a>
 
-  <body>
-    <!-- Header and Navigation -->
-    <header>
       <nav aria-label="Main navigation">
-        <ul>
-          <li>
-            <a href="index.html" aria-current="page">Home</a>
-          </li>
-
-          <li>
-            <a href="about.html">About</a>
-          </li>
-
-          <li>
-            <a href="projects.html">Projects</a>
-          </li>
-
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-      <h1>Welcome to My Portfolio</h1>
+  <main class="container">
 
-      <!-- Profile Image -->
-      <figure>
+    <!-- Homepage Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+
+      <div class="hero-content">
+        <p class="eyebrow">Computer Science | Research | Technology</p>
+
+        <h1 id="hero-heading">Welcome to My Portfolio</h1>
+
+        <p class="hero-intro">
+          I am a PhD student and computer science researcher based in
+          Nairobi, Kenya. My work focuses on education systems,
+          simulation and modelling, artificial intelligence, and
+          AI-driven edge computing frameworks.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="projects.html">Explore My Projects</a>
+          <a class="button button-outline" href="contact.html">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <figure class="hero-image">
         <img
           src="images/Profile.jpg"
-          alt="Portrait of a computer science researcher working at a desk with a laptop"
-          width="1200" 
-          height="800">
-
+          alt="Portrait of a computer science researcher"
+          width="1200"
+          fetchpriority="high"
+        >
         <figcaption>My Academic and Professional Photo.</figcaption>
       </figure>
 
-      <!-- Introduction -->
-      <section aria-labelledby="who-i-am-heading">
-        <h2 id="who-i-am-heading">Who I Am</h2>
+    </section>
 
-        <p>
-          I am a PhD student and computer science researcher based in Nairobi,
-          Kenya. My work focuses on education systems, simulation and modelling,
-          artificial intelligence, and AI-driven edge computing frameworks.
-        </p>
-      </section>
+    <!-- Who I Am -->
+    <section class="content-section" aria-labelledby="who-heading">
 
-      <!-- Short Introduction -->
-      <section aria-labelledby="introduction-heading">
-        <h2 id="introduction-heading">Short Introduction</h2>
+      <h2 id="who-heading">Who I Am</h2>
 
-        <p>
-          I enjoy using computational methods to solve practical problems,
-          especially where intelligent systems can improve decision-making at
-          the network edge. I am also interested in research ethics,
-          experimental design, and clear academic communication.
-        </p>
-      </section>
+      <p>
+        I am a PhD student and computer science researcher based in
+        Nairobi, Kenya. My work focuses on education systems,
+        simulation and modelling, artificial intelligence, and
+        AI-driven edge computing frameworks.
+      </p>
 
-      <!-- Website Navigation -->
-      <section aria-labelledby="explore-heading">
-        <h2 id="explore-heading">Explore My Website</h2>
+    </section>
 
-        <ul>
-          <li>
-            <a href="about.html">
-              Learn more about my background, skills, and goals
-            </a>
-          </li>
+    <!-- Short Introduction -->
+    <section class="content-section" aria-labelledby="intro-heading">
 
-          <li>
-            <a href="projects.html">
-              View my current and planned research projects
-            </a>
-          </li>
+      <h2 id="intro-heading">Short Introduction</h2>
 
-          <li>
-            <a href="contact.html">
-              Contact me for collaboration or academic enquiries
-            </a>
-          </li>
-        </ul>
-      </section>
+      <p>
+        I enjoy using computational methods to solve practical problems,
+        especially where intelligent systems can improve decision-making
+        at the network edge. I am also interested in research ethics,
+        experimental design, and clear academic communication.
+      </p>
 
-      <!-- External Resources -->
-      <section aria-labelledby="resources-heading">
-        <h2 id="resources-heading">Useful External Resources</h2>
+    </section>
 
-        <ul>
-          <li>
-            <a
-              href="https://www.profplanetacademy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Explore training resources for software and web development at
-              Profplanet Academy
-            </a>
-          </li>
+    <!-- Website Navigation -->
+    <section class="content-section" aria-labelledby="explore-heading">
 
-          <li>
-            <a
-              href="http://kemis.go.ke"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn about the Kenya Education Management Information System
-              (KEMIS) and its role in education data capture for decision-making
-            </a>
-          </li>
+      <h2 id="explore-heading">Explore My Website</h2>
 
-          <li>
-            <a
-              href="https://pages.github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Publish websites using GitHub Pages
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
+      <ul class="resource-list">
+        <li>
+          <a href="about.html">
+            Learn more about my background, skills, and goals
+          </a>
+        </li>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2026 My Personal Portfolio. All rights reserved.</p>
-    </footer>
-  </body>
+        <li>
+          <a href="projects.html">
+            View my current and planned research projects
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact me for collaboration or academic enquiries
+          </a>
+        </li>
+      </ul>
+
+    </section>
+
+    <!-- External Resources -->
+    <section class="content-section" aria-labelledby="resources-heading">
+
+      <h2 id="resources-heading">Useful External Resources</h2>
+
+      <ul class="resource-list">
+
+        <li>
+          <a
+            href="https://www.profplanetacademy.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore training resources for software and web development
+            at Profplanet Academy
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="http://kemis.go.ke"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn about the Kenya Education Management Information System
+            (KEMIS) and education data management
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://pages.github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Publish websites using GitHub Pages
+          </a>
+        </li>
+
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 My Personal Portfolio. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
-```
